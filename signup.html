@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computer Science - Sign Up</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      body {
+        background:aliceblue;
+         
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        overflow: hidden;
+      }
+      @media (max-width: 768px) {
+        nav {
+          display: flex;
+          gap: 0px;
+          flex-direction: row;
+          align-items:center ;
+        }
+        header h3 {
+          font-size: 10px;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background-color: rgba(116, 116, 118, 0.95);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+      .logo {
+        color: #221960;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      nav a {
+        color: #291d6b;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 16px;
+        transition: color 0.2s ease;
+      }
+      nav a:hover {
+        color: #bc34fa;
+      }
+      .form-wrapper {
+        background: rgba(25, 25, 35, 0.65);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        padding: 40px;
+        border-radius: 16px;
+        width: 100%;
+        max-width: 440px;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        margin-top: 60px;
+        transition: transform 0.3s ease;
+      }
+      .form-wrapper:hover {
+        transform: translateY(-2px);
+      }
+      .form-wrapper h2 {
+        margin-bottom: 8px;
+        text-align: center;
+        color: #ffffff;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+      .form-subtitle {
+        text-align: center;
+        color: #aaa;
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+      }
+      .form-subtitle span {
+        color: #bc34fa;
+        font-weight: 500;
+      }
+      .input-group {
+        margin-bottom: 22px;
+        position: relative;
+      }
+      .input-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 0.85rem;
+        color: #ccc;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+      }
+      .input-group input {
+        width: 100%;
+        padding: 14px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        background-color: rgba(0, 0, 0, 0.25);
+        color: #ffffff;
+        border-radius: 8px;
+        outline: none;
+        font-size: 1rem;
+        transition: all 0.2s ease;
+      }
+      .input-group input:focus {
+        border-color: #bc34fa;
+        background-color: rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 0 3px rgba(188, 52, 250, 0.15);
+      }
+      .submit-btn {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(135deg, #ff4500, #ff7300);
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        margin-top: 10px;
+        box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+        transition: all 0.2s ease;
+      }
+      .submit-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(255, 69, 0, 0.45);
+        background: linear-gradient(135deg, #e02e00, #ff6200);
+      }
+      .submit-btn:active {
+        transform: translateY(1px);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Computer Science</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="tech.html">Tech</a>
+        <a href="academics.html">Academics</a>
+        
+        
+      </nav>
+    </header>
+
+    <div class="form-wrapper">
+      <h2>Get Started</h2>
+      <p class="form-subtitle">
+        Create your <span>Student Platform</span> account
+      </p>
+
+      <form action="http://localhost:3000/api/signup" method="POST">
+        <div class="input-group">
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="John Doe"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="••••••••"
+            required
+          />
+        </div>
+        <button type="submit" class="submit-btn">Create Account</button>
+      </form>
+    </div>
+  </body>
+</html>

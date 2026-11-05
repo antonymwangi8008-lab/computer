@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computer Science - Inspirations</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      @media (max-width: 768px) {
+        nav {
+            display: flex;
+            gap: 0px;
+            flex-direction: row;
+            align-items: center;
+        }
+        header h3{
+            font-size: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+      }
+      body {
+        background-color: aliceblue;
+        color: white;
+        padding-top: 100px;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background-color: #8d8a8af2;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+      .logo {
+        color: #231a68;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      nav a {
+        color: rgb(32, 25, 112);
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 16px;
+      }
+      nav a:hover {
+        color: #bc34fa;
+      }
+      .btn-signup {
+        background-color: #ff3300;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 4px;
+        text-decoration: none;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+      h1 {
+        color: #bc34fa;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+      .subtitle {
+        color: #ff7300;
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+      }
+      .story-block {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 60px;
+        align-items: center;
+        background-color: #1e1e1e;
+        padding: 30px;
+        border-radius: 8px;
+        border-left: 5px solid #bc34fa;
+      }
+      .story-text h2 {
+        margin-bottom: 15px;
+        color: white;
+      }
+      .story-text p {
+        color: #aaa;
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Computer science</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="tech.html">Tech</a>
+     
+        <a href="signup.html" class="btn-signup">sign up</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h1>Student Inspirations</h1>
+      <p class="subtitle">Real ideas making the world a better place.</p>
+
+      <div class="story-block">
+        <div class="story-text">
+          <h2>EcoTech Network Tracking</h2>
+          <p>
+            A global platform tracking localized climate metrics via distributed
+            hardware networks, conceptualized completely by data engineering
+            students to resolve visualization gaps.
+          </p>
+        </div>
+      </div>
+
+      <div class="story-block" style="border-left-color: #ff7300">
+        <div class="story-text">
+          <h2>Accessible Education Engines</h2>
+          <p>
+            Developing lightweight offline web modules designed to operate in
+            low-bandwidth regions, lowering systemic access friction for
+            foundational programming curriculums globally.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
